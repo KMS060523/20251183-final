@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>여우와 두루미 AR 기말과제</title>
+    <!-- A-Frame 및 AR.js 라이브러리 로드 -->
+    <script src="https://aframe.io"></script>
+    <script src="https://githack.com"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      
+      <!-- Hiro 마커를 카메라로 비추면 아래 오브젝트들이 나타납니다 -->
+      <a-marker preset="hiro">
+        
+        <!-- 1. 중앙 사각 테이블 -->
+        <a-box position="0 0 0" width="1.2" height="0.1" depth="0.8" color="#8B4513"></a-box>
+
+        <!-- 2. 왼쪽 여우 (원뿔 몸통 + 구 머리) -->
+        <!-- 여우 몸통 -->
+        <a-cone position="-0.4 0.25 0" radius-bottom="0.15" radius-top="0.01" height="0.4" color="#FF4500"></a-cone>
+        <!-- 여우 머리 -->
+        <a-sphere position="-0.4 0.5 0" radius="0.08" color="#FF4500"></a-sphere>
+        <!-- 여우 주둥이 (접시 쪽으로 숙인 모습) -->
+        <a-cone position="-0.32 0.48 0" radius-bottom="0.03" radius-top="0" height="0.08" rotation="0 0 -60" color="#FF4500"></a-cone>
+
+        <!-- 3. 여우 앞 납작한 접시 (음식을 먹고 있는 연출) -->
+        <a-cylinder position="-0.2 0.06 0" radius="0.12" height="0.02" color="#FFFFFF"></a-cylinder>
+        <!-- 접시 안 수프 (노란색 납작 원기둥) -->
+        <a-cylinder position="-0.2 0.07 0" radius="0.1" height="0.01" color="#FFD700"></a-cylinder>
+
+
+        <!-- 4. 오른쪽 두루미 (원기둥 몸/목 + 구 머리 + 원뿔 부리) -->
+        <!-- 두루미 몸통 및 긴 목 -->
+        <a-cylinder position="0.4 0.35 0" radius="0.06" height="0.6" color="#FFFFFF"></a-cylinder>
+        <!-- 두루미 머리 -->
+        <a-sphere position="0.4 0.7 0" radius="0.07" color="#FFFFFF"></a-sphere>
+        <!-- 두루미 뾰족한 부리 (접시에 닿지 않아 곤란해하는 각도) -->
+        <a-cone position="0.32 0.68 0" radius-bottom="0.02" radius-top="0" height="0.12" rotation="0 0 45" color="#FFA500"></a-cone>
+
+        <!-- 5. 두루미 앞 납작한 접시 (먹지 못해 대치 중인 연출) -->
+        <a-cylinder position="0.2 0.06 0" radius="0.12" height="0.02" color="#FFFFFF"></a-cylinder>
+        <!-- 접시 안 수프 (그대로 남아있음) -->
+        <a-cylinder position="0.2 0.07 0" radius="0.1" height="0.01" color="#FFD700"></a-cylinder>
+
+      </a-marker>
+
+      <!-- 카메라 위치 설정 -->
+      
+    </a-scene>
+  </body>
+</html>
